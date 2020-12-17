@@ -1,12 +1,10 @@
 // write your createStore function here
 
-const { useState } = require("react");
-
 function createStore(reducer){
   let state;
  
   function dispatch(action){
-    state = candyReducer(state, action)
+    state = reducer(state, action)
     render()
   }
 
@@ -42,4 +40,4 @@ function render() {
 // Use your createStore function and the functions provided here to create a store.
 let store = createStore(candyReducer)
 // Once the store is created, call an initial dispatch.
-store.dispatch()
+store.dispatch({type: "INIT"})
