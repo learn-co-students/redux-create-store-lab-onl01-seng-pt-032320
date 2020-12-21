@@ -25,6 +25,4 @@ function render() {
   }
 };
 
-// Use your createStore function and the functions provided here to create a store.
-// Once the store is created, call an initial dispatch.
 store.dispatch({ type: 'baked potatoes' }); 
